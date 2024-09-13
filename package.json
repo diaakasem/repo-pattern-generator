@@ -1,12 +1,25 @@
 {
-  "name": "repo-pattern-generator",
-  "version": "1.0.0",
+  "name": "@soci/repo-pattern-generator",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "tsc src/main.ts && node src/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "generator",
+    "repository",
+    "design-pattern"
+  ],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "console-gui-tools": "^3.7.0",
+    "mustache": "^4.2.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "typescript": "^5.6.2"
+  }
 }
