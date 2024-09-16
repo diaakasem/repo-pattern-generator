@@ -9,7 +9,10 @@
         "build": "tsc && chmod +x dist/main.js && npm run postbuild",
         "postbuild": "cp -r templates dist/",
         "test": "jest",
-        "publish": "npm run build && npm version patch && npm publish --access public"
+        "patch": "npm version patch && npm run publish",
+        "minor": "npm version minor && npm run publish",
+        "major": "npm version major && npm run publish",
+        "publish": "npm run build && npm publish --access public"
     },
     "bin": {
         "generator": "src/main.js"
