@@ -31,7 +31,7 @@ export async function createTest(src: string, dest: string = '') {
 
     if (!await isFileExist(dest)) {
         const template = await fs.readFile(__dirname + '/templates/PHPTest.tmpl', { encoding: 'utf-8' })
-        const className = absolute.replace(/.*\//, '')
+        const className = absolute.replace(/.*\//, '').replace(/\.php$/, '')
         const lastParentDir = absolute.split('/').slice(-2, -1)[0]
         const rendered = render(template, { className, namespace: lastParentDir })
         await fs.writeFile(dest, rendered, { encoding: 'utf-8' })
