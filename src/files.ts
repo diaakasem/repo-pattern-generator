@@ -7,11 +7,11 @@ export async function isFileExist(src: string) {
     const expanded = src.replace(/^~/, process.env.HOME || '')
     const absolute = expanded.startsWith('/') ? expanded : `${process.cwd()}/${expanded}`
     try {
-        await fs.access(expanded, fs.constants.F_OK)
+        await fs.access(absolute, fs.constants.F_OK)
         return true
     } catch (err) {
         console.error(err)
-        console.error(`File ${expanded} does not exist`)
+        console.error(`File ${absolute} does not exist`)
         return false
     }
 }
