@@ -1,0 +1,25 @@
+<?php
+
+	namespace Soci\Tests\{{namespace}};
+
+	use Account;
+	use AdminsAccountsTest;
+	use BasicTestUtils;
+	use InvalidArgumentException;
+	use PDODataDB;
+	use PHPUnit\Framework\TestCase;
+
+	/**
+	 * @group {{namespace}}
+	 */
+	class {{className}}Test extends TestCase {
+		use AdminsAccountsTest;
+		use DatabaseTransactions;
+
+		public function setUp(): void {
+			self::setUpAdminsAccounts();
+		}
+
+		public function test_success() {
+		}
+	}
