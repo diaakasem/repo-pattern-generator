@@ -6,7 +6,7 @@
     "scripts": {
         "run": "tsc src/main.ts && node dist/main.js",
         "start": "node dist/main.js",
-        "debug": "tsc && node --inspect-brk dist/main.js",
+        "debug": "tsc && node --inspect-brk=0.0.0.0:9229 dist/main.js",
         "build": "tsc && chmod +x dist/main.js && npm run postbuild",
         "postbuild": "cp -r templates dist/",
         "test": "jest",
