@@ -10,8 +10,8 @@ export async function isFileExist(src: string) {
         await fs.access(absolute, fs.constants.F_OK)
         return true
     } catch (err) {
-        console.error(err)
-        console.error(`File ${absolute} does not exist`)
+        // console.error(err)
+        // console.error(`File ${absolute} does not exist`)
         return false
     }
 }
@@ -35,7 +35,7 @@ export async function createTest(src: string, dest: string = '') {
         const lastParentDir = absolute.split('/').slice(-2, -1)[0]
         const rendered = render(template, { className, namespace: lastParentDir })
         await fs.writeFile(dest, rendered, { encoding: 'utf-8' })
-    } else {
-        console.info(`Test file already exists: ${dest}`)
+    // } else {
+        // console.info(`Test file already exists: ${dest}`)
     }
 }
