@@ -13,6 +13,7 @@
         "patch": "npm version patch && npm run publish",
         "minor": "npm version minor && npm run publish",
         "major": "npm version major && npm run publish",
+        "reinstall": "npm uninstall -g @diaakasem/generator && npm install -g @diaakasem/generator",
         "publish": "npm run build && npm publish --access public"
     },
     "bin": {
